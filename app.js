@@ -8,11 +8,71 @@ app.use(express.static("public"));
 const currentYear = new Date().getFullYear();
 
 app.get("/", function(req, res){
+    
+    res.render("home", {year: currentYear, completedProjects: completedProjectsList});
 
-    res.render("home", {year: currentYear});
+});
 
+app.get("/projects/:projectTitle", function(req, res) {
+    let parameter = req.params.projectTitle;
+    completedProjectsList.forEach((project) => {
+        if (project.title === parameter) {
+            res.render("project-page", {title: project.title, image: project.imgFile, imageAlt: project.imgFileAlt, description: project.longDescription, year: currentYear})
+        };
+    });
+    
+    
 });
 
 app.listen(3000, function() {
     console.log("Server started on port 3000");
   });
+
+  const completedProjectsList = [
+    {
+        imgFile: "/images/keeperAppImg.png",
+        imgFileAlt: "View of Keeper App logo and note input bar.",
+        title: "Keeper App",
+        shortDescription: "An application to keep all your notes in.",
+        longDescription: "This is going to be the long description that will talk about the languagues, frameworks and methods used.",
+        projectURL: "https://l2c5jb.csb.app/"
+    },
+
+    {
+        imgFile: "/images/toDoListAppImg.png",
+        imgFileAlt: "View of Keeper App logo and note input bar.",
+        title: "ToDo List App",
+        shortDescription: "An application to make your to do list on.",
+        longDescription: "This is going to be the long description that will talk about the languagues, frameworks and methods used.",
+        projectURL: "https://0lozsd.csb.app/"
+    },
+
+    {
+        imgFile: "/images/theSimonGameImg.png",
+        imgFileAlt: "Simon game tiles.",
+        title: "The Simon Game",
+        shortDescription: "Test your memory with this recall game.",
+        longDescription: "This is going to be the long description that will talk about the languagues, frameworks and methods used.",
+        projectURL: "https://patrick-dwyer.github.io/TheSimonGame/"
+    },
+
+    {
+        imgFile: "/images/drumKitImg.png",
+        imgFileAlt: "Drum kit logo.",
+        title: "Drum 🥁 Kit",
+        shortDescription: "Play around with this online drum kit.",
+        longDescription: "This is going to be the long description that will talk about the languagues, frameworks and methods used.",
+        projectURL: "https://patrick-dwyer.github.io/DrumKit-Site/"
+
+    },
+
+    {
+        imgFile: "/images/diceGame1v1Img.png",
+        imgFileAlt: "Two dice with title of winner.",
+        title: "Dice Game 1 v 1",
+        shortDescription: "Play with a friend on a luck based dice roll.",
+        longDescription: "This is going to be the long description that will talk about the languagues, frameworks and methods used.",
+        projectURL: "https://patrick-dwyer.github.io/RandomDice-1v1/"
+    },
+
+   ]
