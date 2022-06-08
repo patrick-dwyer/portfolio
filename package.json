@@ -13,6 +13,9 @@
     "express": "^4.18.1",
     "nodemon": "^2.0.16"
   },
+  "engines": {
+    "node": "16.13.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/patrick-dwyer/portfolio.git"
@@ -20,5 +23,6 @@
   "bugs": {
     "url": "https://github.com/patrick-dwyer/portfolio/issues"
   },
-  "homepage": "https://github.com/patrick-dwyer/portfolio#readme"
+  "homepage": "https://github.com/patrick-dwyer/portfolio#readme",
+  "devDependencies": {}
 }
