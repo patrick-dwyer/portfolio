@@ -1,13 +1,8 @@
-#intro, #contact, #projectPage {
+#intro, #contact, #projectPage, h3, .socials, .project-card {
     text-align: center;
-    background-color: black;
-    color: white;
 }
 
 .socials a:hover {
     color: green;
 }
 
-h3 {
-    text-align: center;
-}

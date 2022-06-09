@@ -8,12 +8,12 @@
     <h1>Completed Projects</h1>
   </div>
   
-    <div class="container-fluid">
+    <div class="container-fluid ">
       <div class="row gx-2 gy-4">
 
         <!-- Loop through all completed projects to make Bootstrap Card per project -->
         <% completedProjects.forEach(function(project) { %>
-          <div class="col">
+          <div class="col mx-auto">
             <div class="card" style="width: 15rem">
               <img src=<%- project.imgFile %> class="card-img-top" alt=<%- project.imgFileAlt %>>
               <div class="card-body">

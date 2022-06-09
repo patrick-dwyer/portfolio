@@ -57,7 +57,7 @@ app.listen(port, function() {
         imgFile: "/images/emojipediaImg.png",
         imgFileAlt: "Title emojipedia with four emojis displayed below.",
         title: "Emojipedia",
-        shortDescription: "Learn the definitions of emoji's!.",
+        shortDescription: "Learn the definitions of emojis!",
         longDescription: "Website utilizing React. Was the introduction project for using the map function with javascript. Ability to add items to an array file that is imported and displayed on the website frontend.",
         projectURL: "https://h58nvo.csb.app/"
     },
