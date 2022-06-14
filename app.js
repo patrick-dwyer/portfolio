@@ -34,6 +34,8 @@ app.listen(port, function() {
     console.log("Server started sucessfully.");
   });
 
+
+// All projects compiled in an array
   const completedProjectsList = [
     {
         imgFile: "/images/keeperAppImg.png",
@@ -76,7 +78,7 @@ app.listen(port, function() {
         imgFileAlt: "Simon game tiles.",
         title: "The Simon Game",
         shortDescription: "Test your memory with this recall game.",
-        longDescription: "One of my favorite projects I’ve worked on. This was setup from scratch where I went step by step. The first step was to create all the HTML elements required, then style them with CSS. Once this was completed, Javascript was used to bring functionality to this project. This project was written using JQuery. Some of the important concepts used were event listeners, logic statements, using DOM manipulation techniques for CSS animation and switch statements. Something I had added once the game was complete was a mobile friendly button to allow this game to be started without a key press but by clicking the button.",
+        longDescription: "One of my favorite projects I’ve worked on. This was setup from scratch where I went step by step. The first step was to create all the HTML elements required, then style them with CSS. Once this was completed, Javascript was used to bring functionality to this project. This project was written using JQuery to provide more concise code. Some of the important concepts used were event listeners, logic statements, using DOM manipulation techniques for CSS animation and switch statements. Something I had added once the game was complete was a mobile friendly button to allow this game to be started without a key press but by clicking the button.",
         projectURL: "https://patrick-dwyer.github.io/TheSimonGame/"
     },
 
