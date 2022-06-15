@@ -7,6 +7,7 @@ app.use(express.static("public"));
 
 const currentYear = new Date().getFullYear();
 
+
 app.get("/", function(req, res){
     
     res.render("home", {year: currentYear, completedProjects: completedProjectsList});
