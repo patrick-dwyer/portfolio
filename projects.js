@@ -1,5 +1,5 @@
 // All projects compiled in an array
-const completedProjectsList = [
+const completedProjectList = [
     {
         imgFile: "/images/keeperAppImg.png",
         imgFileAlt: "View of Keeper App logo and note input bar.",
@@ -75,4 +75,76 @@ const completedProjectsList = [
 
    ]
 
-   exports.completedProjectsList = completedProjectsList
+
+   //All highlighted projects
+   const highlightedProjectList = [
+    {
+        imgFile: "/images/keeperAppImg.png",
+        imgFileAlt: "View of Keeper App logo and note input bar.",
+        title: "Keeper App",
+        shortDescription: "An application to keep all your notes in.",
+        longDescription: "This frontend was built using React. Some important concepts utilized in this project were declarative programming, state management and Javascript concepts (such as mapping, filtering, ternary operator, Logical AND, and arrow functions). What was interesting with this project was the ability to have different components interact with each other through properties and the ability to create and remove notes. The result is a modern looking user interface with built in functionality.",
+        projectURL: "https://l2c5jb.csb.app/"
+    },
+
+    {
+        imgFile: "/images/theSimonGameHighlight.png",
+        imgFileAlt: "Simon game tiles.",
+        title: "The Simon Game",
+        shortDescription: "Test your memory with this recall game.",
+        longDescription: "One of my favorite projects I’ve worked on. This was setup from scratch where I went step by step. The first step was to create all the HTML elements required, then style them with CSS. Once this was completed, Javascript was used to bring functionality to this project. This project was written using JQuery to provide more concise code. Some of the important concepts used were event listeners, logic statements, using DOM manipulation techniques for CSS animation and switch statements. Something I had added once the game was complete was a mobile friendly button to allow this game to be started without a key press but by clicking the button.",
+        projectURL: "https://patrick-dwyer.github.io/TheSimonGame/"
+    },
+
+    {
+        imgFile: "/images/drumKitImg.png",
+        imgFileAlt: "Drum kit logo.",
+        title: "Drum 🥁 Kit",
+        shortDescription: "Play around with this online drum kit.",
+        longDescription: "This game was a prerequisite to The Simon Game. Concepts that were learned and practiced during this project were loops, event listeners, switch statements, and nested functions.",
+        projectURL: "https://patrick-dwyer.github.io/DrumKit-Site/"
+
+    }
+
+   ]
+
+   //Current Projects
+   const currentProjectList = [
+    {
+        title: "Secret Santa Generator",
+        description: "An application that would allow users to input members name to be included in secret santa. Options for this program would include to either give permutations or combinations based on the family/friend group criteria.",
+        name: "headingOne",
+        control: "collapseOne",
+        dataTarget: "#collapseOne"
+    },
+
+    {
+        title: "The Dice Game",
+        description: "A friend of mine taught me a really cool game with six dice. I am looking to replicate this through a web application with single and multiplayer options.",
+        name: "headingTwo",
+        control: "collapseTwo",
+        dataTarget: "#collapseTwo"
+    },
+
+    {
+        title: "Stock Notifier App",
+        description: "An app that will notify stock prices on certain schedules and/or if price of the stock hits specific criteria.",
+        name: "headingThree",
+        control: "collapseThree",
+        dataTarget: "#collapseThree"
+    },
+
+    {
+        title: "Receipt App",
+        description: "An application that would allow users to track spending at grocery stores.",
+        name: "headingFour",
+        control: "collapseFour",
+        dataTarget: "#collapseFour"
+    }
+
+   ]
+
+
+   exports.highlightedProjectList = highlightedProjectList
+   exports.completedProjectList = completedProjectList
+   exports.currentProjectList = currentProjectList

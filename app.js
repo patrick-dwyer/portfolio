@@ -1,7 +1,8 @@
 const express = require("express");
 const ejs = require("ejs");
 const app = express();
-const completedProjects  = require(__dirname + "/projects.js");
+const {completedProjectList, highlightedProjectList, currentProjectList}  = require(__dirname + "/projects.js");
+const collapseNav = require(__dirname + "/index.js");
 
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
@@ -9,18 +10,23 @@ app.use(express.static("public"));
 const currentYear = new Date().getFullYear();
 
 
+
 app.get("/", function(req, res){
     
-    res.render("home", {year: currentYear, completedProjects: completedProjects.completedProjectsList});
+    res.render("home", {year: currentYear, highlightedProjects: highlightedProjectList, currentProjects: currentProjectList});
 
+});
+
+app.get("/projects", (req, res) => {
+    res.render("projects-list-page", {year: currentYear, completedProjects: completedProjectList})
 });
 
 app.get("/projects/:projectTitle", function(req, res) {
     let parameter = req.params.projectTitle;
     
-    completedProjects.completedProjectsList.forEach((project) => {
+    completedProjectList.forEach((project) => {
         if (project.title === parameter) {
-            res.render("project-page", {title: project.title, image: project.imgFile, imageAlt: project.imgFileAlt, description: project.longDescription, year: currentYear})
+            res.render("project-page", {title: project.title, image: project.imgFile, imageAlt: project.imgFileAlt, description: project.longDescription, year: currentYear, projectURL: project.projectURL})
         };
     });
 });

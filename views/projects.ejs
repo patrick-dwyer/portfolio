@@ -1,95 +1,77 @@
 <!-- Projects -->
+<div id="fprojects"></div>
+<div class="p-5 m-5">
+  <h1>Completed Project Highlights</h1>
+</div>
 
-<div id="projects" class="container-fluid bg-light p-5 text-center">
+<!-- Featured Projects Carousel -->
 
-
-  <!-- Completed Projects -->
-  <div class="p-5 mb-5">
-    <h1>Completed Projects</h1>
-  </div>
-  
-    <div class="container-fluid ">
-      <div class="row gx-2 gy-4">
-
-        <!-- Loop through all completed projects to make Bootstrap Card per project -->
-        <% completedProjects.forEach(function(project) { %>
-          <div class="col mx-auto">
-            <div class="card" style="width: 15rem">
-              <img src=<%- project.imgFile %> class="card-img-top" alt=<%- project.imgFileAlt %>>
-              <div class="card-body">
-                <h5 class="card-title"><%- project.title %> </h5>
-                <p class="card-text"> <%- project.shortDescription %></p>
-                <a href=<%-project.projectURL%> class="btn btn-outline-dark m-2">View Project</a>
-                <a href="/projects/<%= project.title %>" class="btn btn-outline-dark">More information</a>
-              </div>
-            </div>
-          </div>
-          <% }); %>
-
-      </div> 
+  <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="0" class="active bg-warning" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="1" class="bg-warning" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="2" class="bg-warning" aria-label="Slide 3"></button>
     </div>
-    
+
+    <div class="carousel-inner bg-dark pt-5">     
+      <div class="carousel-item active slide-image">
+        <a href=<%- highlightedProjects[0].projectURL %> target="_blank" rel="noreferrer noopener"><img src=<%- highlightedProjects[0].imgFile %> alt=<%- highlightedProjects[0].imgFileAlt %>></a>
+     
+      </div>
+      <div class="carousel-item slide-image">
+        <a href=<%- highlightedProjects[1].projectURL %> target="_blank" rel="noreferrer noopener"><img src=<%- highlightedProjects[1].imgFile %> alt=<%- highlightedProjects[1].imgFileAlt %>></a>
+       
+      </div>
+      <div class="carousel-item slide-image">
+        <a href=<%- highlightedProjects[2].projectURL %> target="_blank" rel="noreferrer noopener"><img src=<%- highlightedProjects[2].imgFile %> alt=<%- highlightedProjects[2].imgFileAlt %>></a>
+  
+      </div>
+
+
+    </div>
+
+    <!-- Carousel Previous Button -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+
+    <!-- Carousel Next Button -->
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+  </div>
+
+
+<!-- Button for complete project list -->
+<div id="projectsBtn" class="bg-dark p-5">
+  <a href="/projects"><button  type="submit" class="btn btn-light btn-lg p-5" >Click Here For Full Completed Project List And Details</button></a>
+</div>
+
+<div id="cprojects" class=" bg-light text-center">
 
     <!-- Current projects -->
-    <div class="p-5 mb-5">
+    <div class="p-5 m-5">
       <h1>Current Projects</h1>
     </div>
 
-    <!-- Accordian motif for each ongoing projects -->
+    <!-- Loop to display each current project-->
     <div class="accordion" id="currentProjects">
-      <!-- Project 1 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            <p>Secret Santa Generator</p>
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#currentProjects">
-          <div class="accordion-body">
-            <p>An application that would allow users to input members name to be included in secret santa. Options for this program would include to either give permutations or combinations based on the family/friend group criteria.</p>
+      <% currentProjects.forEach(function(project) { %>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id=<%- project.name %>>
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target=<%- project.dataTarget %> aria-expanded="true" aria-controls=<%- project.control %>>
+              <p><%- project.title %></p>
+            </button>
+          </h2>
+          <div id=<%- project.control %> class="accordion-collapse collapse" aria-labelledby=<%- project.name %> data-bs-parent="#currentProjects">
+            <div class="accordion-body">
+              <p><%- project.description %></p>
+            </div>
           </div>
-        </div>
-      </div>
-      <!-- Project 2 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-            <p>The Dice Game</p>
-          </button>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#currentProjects">
-          <div class="accordion-body">
-            <p>A friend of mine taught me a really cool game with six dice. I am looking to replicate this through a web application with single and multiplayer options.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Project 3 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            <p>Stock Notifier App</p>
-          </button>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#currentProjects">
-          <div class="accordion-body">
-            <p>An app that will notify stock prices on certain schedules and/or if price of the stock hits specific criteria.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Project 4 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFour">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-            <p>Receipt App</p>
-          </button>
-        </h2>
-        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#currentProjects">
-          <div class="accordion-body">
-            <p>An application that would allow users to track spending at grocery stores. </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
+        </div>  
+      <% }); %>
 
 </div>
