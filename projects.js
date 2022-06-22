@@ -1,9 +1,27 @@
 // All projects compiled in an array
 const completedProjectList = [
     {
+        imgFile: "/images/secretsAppImg.png",
+        imgFileAlt: "Login screen with key, secerets heading, quotes share your secrets anonymously and login/register.",
+        title: "Secrets Keeper App",
+        shortDescription: "An application to keep all your secrets anonymously!",
+        longDescription: "This project was built during a module about authentication within a website. The website was built with different layers to learn about various methods of having a user authenticate. We started with the basics of usernames and passwords. This included encryption, hashing and salting. Building on this knowledge, inclusion of cookies and sessions were added and with the final touches using OAuth2.0 with Google and Facebook (now Meta).",
+        projectURL: "https://pjd-secrets.herokuapp.com/"
+    },
+
+    {
+        imgFile: "/images/todolist-v3Img.png",
+        imgFileAlt: "View of todolist notepad with actions described for use.",
+        title: "ToDoList App",
+        shortDescription: "An application to keep all your to do list items.",
+        longDescription: "Built by putting together Nodejs using express, MongoDB with mongoose and EJS. This project has a sustained connection to a database with MongoDB Atlas and allows users to input notes that are persisted. Custom parameters can be used to make new lists that are stored in the database. The ability to add and delete items is given by clicking the + icon or checkbox respectively. This app was a full effort of all that has been learned in through my course to utilize both front and back end techniques.",
+        projectURL: "https://l2c5jb.csb.app/"
+    },
+
+    {
         imgFile: "/images/keeperAppImg.png",
         imgFileAlt: "View of Keeper App logo and note input bar.",
-        title: "Keeper App",
+        title: "Keeper App (FrontEnd)",
         shortDescription: "An application to keep all your notes in.",
         longDescription: "This frontend was built using React. Some important concepts utilized in this project were declarative programming, state management and Javascript concepts (such as mapping, filtering, ternary operator, Logical AND, and arrow functions). What was interesting with this project was the ability to have different components interact with each other through properties and the ability to create and remove notes. The result is a modern looking user interface with built in functionality.",
         projectURL: "https://l2c5jb.csb.app/"
@@ -12,7 +30,7 @@ const completedProjectList = [
     {
         imgFile: "/images/toDoListAppImg.png",
         imgFileAlt: "View of Keeper App logo and note input bar.",
-        title: "ToDo List App",
+        title: "ToDo List (FrontEnd)",
         shortDescription: "An application to make your to do list on.",
         longDescription: "This frontend was built using React. Similar to the Keeper App hooks, props and the utilization of Javascript were key to functionality. This was a precursor to the Keeper App to help practice the concepts required. You can add notes by typing and clicking the Add button and delete by clicking on the list item. The data submitted is not persisted and resets upon refresh or navigation away from the page.",
         projectURL: "https://0lozsd.csb.app/"
@@ -76,8 +94,16 @@ const completedProjectList = [
    ]
 
 
-   //All highlighted projects
+   //All highlighted projects - max three items
    const highlightedProjectList = [
+    {
+        imgFile: "/images/todolist-v3Img.png",
+        imgFileAlt: "View of todolist notepad with actions described for use.",
+        title: "ToDoList App",
+        shortDescription: "An application to keep all your to do list items.",
+        longDescription: "Built by putting together Nodejs using express, MongoDB with mongoose and EJS. This project has a sustained connection to a database with MongoDB Atlas and allows users to input notes that are persisted. Custom parameters can be used to make new lists that are stored in the database. The ability to add and delete items is given by clicking the + icon or checkbox respectively. This app was a full effort of all that has been learned in through my course to utilize both front and back end techniques.",
+        projectURL: "https://l2c5jb.csb.app/"
+    },
     {
         imgFile: "/images/keeperAppImg.png",
         imgFileAlt: "View of Keeper App logo and note input bar.",
@@ -94,17 +120,7 @@ const completedProjectList = [
         shortDescription: "Test your memory with this recall game.",
         longDescription: "One of my favorite projects I’ve worked on. This was setup from scratch where I went step by step. The first step was to create all the HTML elements required, then style them with CSS. Once this was completed, Javascript was used to bring functionality to this project. This project was written using JQuery to provide more concise code. Some of the important concepts used were event listeners, logic statements, using DOM manipulation techniques for CSS animation and switch statements. Something I had added once the game was complete was a mobile friendly button to allow this game to be started without a key press but by clicking the button.",
         projectURL: "https://patrick-dwyer.github.io/TheSimonGame/"
-    },
-
-    {
-        imgFile: "/images/drumKitImg.png",
-        imgFileAlt: "Drum kit logo.",
-        title: "Drum 🥁 Kit",
-        shortDescription: "Play around with this online drum kit.",
-        longDescription: "This game was a prerequisite to The Simon Game. Concepts that were learned and practiced during this project were loops, event listeners, switch statements, and nested functions.",
-        projectURL: "https://patrick-dwyer.github.io/DrumKit-Site/"
-
-    }
+    } 
 
    ]
 
