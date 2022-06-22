@@ -1,6 +1,15 @@
 // All projects compiled in an array
 const completedProjectList = [
     {
+        imgFile: "/images/blogAppImg.png",
+        imgFileAlt: "Home screen with menu for home, about us and contact us, along with header of home.",
+        title: "Blog Site",
+        shortDescription: "Website designed for a personal blog.",
+        longDescription: "This site was built for the functionality of displaying saved database objects. EJS, MongoDB, Mongoose, NodeJS and Express were all utilized to make this project functional. To compose a new blog post, the parameter must be “compose” to access the page for this form submission. This was one of the first projects I completed that had both front and back end functionality with a local database, and have since extended it to have an external database and external hosting for anyone to access and use.",
+        projectURL: "https://pjd-blog.herokuapp.com/"
+    },
+
+    {
         imgFile: "/images/secretsAppImg.png",
         imgFileAlt: "Login screen with key, secerets heading, quotes share your secrets anonymously and login/register.",
         title: "Secrets Keeper App",
@@ -59,7 +68,7 @@ const completedProjectList = [
         imgFileAlt: "Simon game tiles.",
         title: "The Simon Game",
         shortDescription: "Test your memory with this recall game.",
-        longDescription: "One of my favorite projects I’ve worked on. This was setup from scratch where I went step by step. The first step was to create all the HTML elements required, then style them with CSS. Once this was completed, Javascript was used to bring functionality to this project. This project was written using JQuery to provide more concise code. Some of the important concepts used were event listeners, logic statements, using DOM manipulation techniques for CSS animation and switch statements. Something I had added once the game was complete was a mobile friendly button to allow this game to be started without a key press but by clicking the button.",
+        longDescription: "One of my favorite projects I’ve worked on. This was setup from scratch where I went step by step. The first step was to create all the HTML elements required, then style them with CSS. Once this was completed, Javascript was used to bring functionality to this project. This project was written using JQuery. Some of the important concepts used were event listeners, logic statements, using DOM manipulation techniques for CSS animation and switch statements. Something I had added post project completion was a mobile friendly button to allow this game to be started without a key press but by clicking the button.",
         projectURL: "https://patrick-dwyer.github.io/TheSimonGame/"
     },
 
@@ -68,7 +77,7 @@ const completedProjectList = [
         imgFileAlt: "Drum kit logo.",
         title: "Drum 🥁 Kit",
         shortDescription: "Play around with this online drum kit.",
-        longDescription: "This game was a prerequisite to The Simon Game. Concepts that were learned and practiced during this project were loops, event listeners, switch statements, and nested functions.",
+        longDescription: "This game was a prerequisite to The Simon Game. Concepts that were learned and practiced during this project were loops, event listeners, switch statements, and nested functions. Each click of a square or hit of a the letter key will cause the specific drum sound.",
         projectURL: "https://patrick-dwyer.github.io/DrumKit-Site/"
 
     },
